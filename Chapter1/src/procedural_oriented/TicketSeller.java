@@ -1,4 +1,4 @@
-package chapter1.procedural_oriented;
+package procedural_oriented;
 
 public class TicketSeller {
     private TicketOffice ticketOffice;

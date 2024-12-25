@@ -57,15 +57,15 @@ public abstract class Macbook {
 
 ```java
 public abstract class Chip {
-		...		
-		public void recordOperation(Storage storage, String operation) {
-		        int capacity = Integer.parseInt(storage.getCapacity().replaceAll("[^0-9]", ""));
-		        if (storage.getOperationHistory().size() < capacity) {
-		            storage.addOperationRecord(operation);
-		        } else {
-		            System.out.println("Storage capacity reached. Cannot record more operations.");
-		        }
-		    }
+    ...		
+    public void recordOperation(Storage storage, String operation) {
+        int capacity = Integer.parseInt(storage.getCapacity().replaceAll("[^0-9]", ""));
+        if (storage.getOperationHistory().size() < capacity) {
+            storage.addOperationRecord(operation);
+        } else {
+            System.out.println("Storage capacity reached. Cannot record more operations.");
+        }
+    }
 
     public abstract void performOperation(String operation, double a, double b, Storage storage);
     ...
@@ -76,8 +76,8 @@ public abstract class Chip {
 
 ```java
 public class Storage {
-...
-public String getCapacity() {
+    ...
+    public String getCapacity() {
         return capacity;
     }
 
@@ -88,7 +88,7 @@ public String getCapacity() {
     public ArrayList<String> getOperationHistory() {
         return new ArrayList<>(operationHistory);
     }
-...
+    ...
 }
 ```
 
@@ -104,12 +104,12 @@ public String getCapacity() {
 
 ```java
 public class Movie {
-		private Money fee;
-		private DiscountPolicy discountPolicy;
-		
-		public Money calculateMovieFee(Screening screening) {
-				return fee.minus(discountPolicy.calculateDiscountAmount(screening));
-		}
+    private Money fee;
+    private DiscountPolicy discountPolicy;
+
+    public Money calculateMovieFee(Screening screening) {
+        return fee.minus(discountPolicy.calculateDiscountAmount(screening));
+    }
 }
 ```
 
@@ -154,7 +154,7 @@ public class Movie {
 
 ```java
 public abstract class Macbook {
-		...
+    ...
     public abstract void performTask(String task, double a, double b);
 
     public double calculatePrice() { ... }
